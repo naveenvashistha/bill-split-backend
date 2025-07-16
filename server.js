@@ -18,6 +18,8 @@ mongoose.connect("mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.e
   useUnifiedTopology: true,
 });
 
+app.set('trust proxy', 1);
+
 app.use(
   cors({
     credentials: true,
