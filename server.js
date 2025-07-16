@@ -39,8 +39,6 @@ app.use(
     }),
     cookie: { 
       maxAge: oneDay,
-      // secure: true, 
-      sameSite: "none", // Use 'none' for cross-site cookies
       httpOnly: true, // Helps prevent XSS attacks
     },
     resave: false,
