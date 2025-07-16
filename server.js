@@ -37,7 +37,12 @@ app.use(
     store: MongoStore.create({
       mongoUrl: "mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.env.MONGO_PASSWORD + "@cluster0.abupwls.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     }),
-    cookie: { maxAge: oneDay },
+    cookie: { 
+      maxAge: oneDay,
+      secure: true, // Set to true if using HTTPS
+      sameSite: "none", // Use 'none' for cross-site cookies
+      httpOnly: true, // Helps prevent XSS attacks
+    },
     resave: false,
   })
 );
