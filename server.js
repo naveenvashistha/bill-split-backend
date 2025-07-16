@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.e
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000"],
+    origin: ["https://bill-split-frontend.vercel.app", "http://localhost:3000"],
   })
 );
 
