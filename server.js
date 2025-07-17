@@ -78,7 +78,7 @@ app.post("/api/", async (req, res) => {
     let mailOptions = {
       from: process.env.MAIL_USERNAME,
       to: req.body.userEmail,
-      subject: "Bill Split",
+      subject: "Bill Split - " + req.body.userTopic,
       text:
         "Hi your code for login your Bill Split account named " +
         req.body.userTopic +
